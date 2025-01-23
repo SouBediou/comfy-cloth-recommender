@@ -42,36 +42,38 @@ const Index = () => {
               <WeatherWidget />
               <div className="bg-white p-4 rounded-lg shadow-sm">
                 <h2 className="text-xl font-semibold mb-4">Mood du jour</h2>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-4">
-                    <ToggleGroupItem value="bureau" className="w-full bg-[#9b87f5] text-white hover:bg-[#8b77e5] h-24 rounded-lg flex items-center justify-center gap-2">
-                      <Briefcase className="w-6 h-6" />
-                      Bureau & Meeting
-                    </ToggleGroupItem>
-                    <ToggleGroupItem value="entretien" className="w-full bg-[#F97316] text-white hover:bg-[#e96305] h-24 rounded-lg flex items-center justify-center gap-2">
-                      <UserRound className="w-6 h-6" />
-                      Entretien
-                    </ToggleGroupItem>
-                    <ToggleGroupItem value="relax" className="w-full bg-[#0EA5E9] text-white hover:bg-[#0d94d8] h-24 rounded-lg flex items-center justify-center gap-2">
-                      <Palmtree className="w-6 h-6" />
-                      Relax & Week-end
-                    </ToggleGroupItem>
+                <ToggleGroup type="single" value={context} onValueChange={(value) => value && setContext(value)}>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-4">
+                      <ToggleGroupItem value="bureau" className="w-full bg-[#9b87f5] text-white hover:bg-[#8b77e5] h-24 rounded-lg flex items-center justify-center gap-2">
+                        <Briefcase className="w-6 h-6" />
+                        Bureau & Meeting
+                      </ToggleGroupItem>
+                      <ToggleGroupItem value="entretien" className="w-full bg-[#F97316] text-white hover:bg-[#e96305] h-24 rounded-lg flex items-center justify-center gap-2">
+                        <UserRound className="w-6 h-6" />
+                        Entretien
+                      </ToggleGroupItem>
+                      <ToggleGroupItem value="relax" className="w-full bg-[#0EA5E9] text-white hover:bg-[#0d94d8] h-24 rounded-lg flex items-center justify-center gap-2">
+                        <Palmtree className="w-6 h-6" />
+                        Relax & Week-end
+                      </ToggleGroupItem>
+                    </div>
+                    <div className="space-y-4">
+                      <ToggleGroupItem value="ceremonie" className="w-full bg-[#33C3F0] text-white hover:bg-[#22b2df] h-24 rounded-lg flex items-center justify-center gap-2">
+                        <GlassWater className="w-6 h-6" />
+                        Cérémonie & Cocktail
+                      </ToggleGroupItem>
+                      <ToggleGroupItem value="night" className="w-full bg-[#F2FCE2] text-gray-800 hover:bg-[#e2ecD2] h-24 rounded-lg flex items-center justify-center gap-2">
+                        <Music className="w-6 h-6" />
+                        Night & Party
+                      </ToggleGroupItem>
+                      <ToggleGroupItem value="crush" className="w-full bg-[#FEC6A1] text-gray-800 hover:bg-[#eeb691] h-24 rounded-lg flex items-center justify-center gap-2">
+                        <Heart className="w-6 h-6" />
+                        Crush & Date
+                      </ToggleGroupItem>
+                    </div>
                   </div>
-                  <div className="space-y-4">
-                    <ToggleGroupItem value="ceremonie" className="w-full bg-[#33C3F0] text-white hover:bg-[#22b2df] h-24 rounded-lg flex items-center justify-center gap-2">
-                      <GlassWater className="w-6 h-6" />
-                      Cérémonie & Cocktail
-                    </ToggleGroupItem>
-                    <ToggleGroupItem value="night" className="w-full bg-[#F2FCE2] text-gray-800 hover:bg-[#e2ecD2] h-24 rounded-lg flex items-center justify-center gap-2">
-                      <Music className="w-6 h-6" />
-                      Night & Party
-                    </ToggleGroupItem>
-                    <ToggleGroupItem value="crush" className="w-full bg-[#FEC6A1] text-gray-800 hover:bg-[#eeb691] h-24 rounded-lg flex items-center justify-center gap-2">
-                      <Heart className="w-6 h-6" />
-                      Crush & Date
-                    </ToggleGroupItem>
-                  </div>
-                </div>
+                </ToggleGroup>
               </div>
               <RecommendationCard items={recommendations} />
             </div>
