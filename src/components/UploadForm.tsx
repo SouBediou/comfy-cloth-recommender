@@ -35,7 +35,7 @@ export const UploadForm = () => {
     <div className="space-y-6 p-6 bg-white rounded-lg shadow-sm">
       <div {...getRootProps()} className="upload-dropzone">
         <input {...getInputProps()} />
-        <p>Glissez-déposez des photos ici ou cliquez pour sélectionner</p>
+        <p>Flasher votre dressing pour upload</p>
       </div>
 
       <div className="space-y-4">
