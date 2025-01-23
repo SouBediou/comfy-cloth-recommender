@@ -30,18 +30,20 @@ const Index = () => {
     loadRecommendations();
   }, [context]);
 
+  const Logo = () => (
+    <div className="absolute top-6 right-6 w-32">
+      <img
+        src="/lovable-uploads/77c9682a-32ac-4e9e-aeac-2dd86af684f2.png"
+        alt="Lookin'good"
+        className="w-full h-auto"
+      />
+    </div>
+  );
+
   if (!isStarted) {
     return (
       <div className="min-h-screen bg-[#0F0B1E] flex flex-col items-center justify-center p-4">
-        {/* Logo */}
-        <div className="absolute top-6 right-6 w-32">
-          <img
-            src="/lovable-uploads/77c9682a-32ac-4e9e-aeac-2dd86af684f2.png"
-            alt="Lookin'good"
-            className="w-full h-auto"
-          />
-        </div>
-
+        <Logo />
         <div className="w-full max-w-md space-y-8 text-center">
           <h1 className="text-5xl font-bold text-white">
             Let's Get{" "}
@@ -84,6 +86,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Logo />
       <div className="container py-8">
         <h1 className="text-4xl font-bold mb-4">LookinGood</h1>
         <p className="text-gray-600 mb-8">Votre assistant vestimentaire intelligent</p>
