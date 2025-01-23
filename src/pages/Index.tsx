@@ -41,26 +41,36 @@ const Index = () => {
               <WeatherWidget />
               <div className="bg-white p-4 rounded-lg shadow-sm">
                 <h2 className="text-xl font-semibold mb-4">Mood du jour</h2>
-                <ToggleGroup type="single" value={context} onValueChange={(value) => value && setContext(value)}>
-                  <ToggleGroupItem value="bureau" className="flex-1">
-                    Bureau & Meeting
-                  </ToggleGroupItem>
-                  <ToggleGroupItem value="entretien" className="flex-1">
-                    Entretien
-                  </ToggleGroupItem>
-                  <ToggleGroupItem value="relax" className="flex-1">
-                    Relax & Week-end
-                  </ToggleGroupItem>
-                  <ToggleGroupItem value="ceremonie" className="flex-1">
-                    Cérémonie & Cocktail
-                  </ToggleGroupItem>
-                  <ToggleGroupItem value="night" className="flex-1">
-                    Night & Party
-                  </ToggleGroupItem>
-                  <ToggleGroupItem value="crush" className="flex-1">
-                    Crush & Date
-                  </ToggleGroupItem>
-                </ToggleGroup>
+                <div className="grid grid-cols-2 gap-4">
+                  <ToggleGroup type="single" value={context} onValueChange={(value) => value && setContext(value)} className="grid grid-cols-1 gap-4">
+                    <ToggleGroupItem value="bureau" className="flex-1 bg-[#9b87f5] text-white hover:bg-[#8b77e5] h-24 rounded-lg">
+                      Bureau & Meeting
+                    </ToggleGroupItem>
+                    <ToggleGroupItem value="entretien" className="flex-1 bg-[#F97316] text-white hover:bg-[#e96305] h-24 rounded-lg">
+                      Entretien
+                    </ToggleGroupItem>
+                    <ToggleGroupItem value="relax" className="flex-1 bg-[#0EA5E9] text-white hover:bg-[#0d94d8] h-24 rounded-lg">
+                      Relax & Week-end
+                    </ToggleGroupItem>
+                    <ToggleGroupItem value="ceremonie" className="flex-1 bg-[#33C3F0] text-white hover:bg-[#22b2df] h-24 rounded-lg">
+                      Cérémonie & Cocktail
+                    </ToggleGroupItem>
+                  </ToggleGroup>
+                  <ToggleGroup type="single" value={context} onValueChange={(value) => value && setContext(value)} className="grid grid-cols-1 gap-4">
+                    <ToggleGroupItem value="night" className="flex-1 bg-[#F2FCE2] text-gray-800 hover:bg-[#e2ecD2] h-24 rounded-lg">
+                      Night & Party
+                    </ToggleGroupItem>
+                    <ToggleGroupItem value="crush" className="flex-1 bg-[#FEC6A1] text-gray-800 hover:bg-[#eeb691] h-24 rounded-lg">
+                      Crush & Date
+                    </ToggleGroupItem>
+                    <ToggleGroupItem value="ecole" className="flex-1 bg-[#accbee] text-gray-800 hover:bg-[#9cbbde] h-24 rounded-lg">
+                      École
+                    </ToggleGroupItem>
+                    <ToggleGroupItem value="restaurant" className="flex-1 bg-[#d299c2] text-gray-800 hover:bg-[#c289b2] h-24 rounded-lg">
+                      Restaurant
+                    </ToggleGroupItem>
+                  </ToggleGroup>
+                </div>
               </div>
               <RecommendationCard items={recommendations} />
             </div>
