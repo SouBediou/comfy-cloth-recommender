@@ -46,9 +46,9 @@ export const WeatherWidget = () => {
 
   if (loading) {
     return (
-      <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-lg p-6 animate-pulse">
-        <div className="h-8 bg-blue-400/50 rounded w-24 mb-2"></div>
-        <div className="h-4 bg-blue-400/50 rounded w-32"></div>
+      <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-lg p-4 animate-pulse">
+        <div className="h-6 bg-blue-400/50 rounded w-20 mb-2"></div>
+        <div className="h-3 bg-blue-400/50 rounded w-24"></div>
       </div>
     );
   }
@@ -56,7 +56,7 @@ export const WeatherWidget = () => {
   if (!weather) return null;
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-2">
       <form onSubmit={handleSubmit} className="flex gap-2">
         <Input
           type="text"
@@ -70,20 +70,20 @@ export const WeatherWidget = () => {
         </Button>
       </form>
 
-      <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-lg p-6">
-        <div className="flex items-center justify-between mb-4">
+      <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-lg p-4">
+        <div className="flex items-center justify-between mb-2">
           <div>
-            <h2 className="text-3xl font-bold">{weather.temperature}°C</h2>
-            <p className="text-lg capitalize">{weather.condition}</p>
-            <p className="text-sm opacity-75">{city}</p>
+            <h2 className="text-2xl font-bold">{weather.temperature}°C</h2>
+            <p className="text-sm capitalize">{weather.condition}</p>
+            <p className="text-xs opacity-75">{city}</p>
           </div>
           <img 
             src={weather.icon} 
             alt={weather.condition} 
-            className="w-20 h-20"
+            className="w-12 h-12"
           />
         </div>
-        <div className="grid grid-cols-2 gap-4 text-sm">
+        <div className="grid grid-cols-3 gap-2 text-xs">
           <div>
             <p className="opacity-75">Ressenti</p>
             <p className="font-semibold">{weather.feelsLike}°C</p>
