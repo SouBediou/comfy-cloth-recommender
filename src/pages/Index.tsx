@@ -43,7 +43,7 @@ const Index = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-[#D946EF] to-[#8B5CF6] opacity-20 blur-xl rounded-full" />
             <div className="relative">
               <img
-                src="/lovable-uploads/1ec94333-6a87-4c7c-a2c4-b8445bf4f489.png"
+                src="/lovable-uploads/2d284ac0-bc9e-49f8-baf6-a5ae06a30340.png"
                 alt="Clothes rack"
                 className="w-full h-full object-contain"
               />
