@@ -85,18 +85,18 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#0F0B1E] text-white">
       <Logo />
       <div className="container py-8">
         <h1 className="text-4xl font-bold mb-4">LookinGood</h1>
-        <p className="text-gray-600 mb-8">Votre assistant vestimentaire intelligent</p>
+        <p className="text-gray-300 mb-8">Votre assistant vestimentaire intelligent</p>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
             <div className="space-y-4">
               <h2 className="text-xl font-semibold">Votre ville ?</h2>
               <WeatherWidget />
-              <div className="bg-white p-4 rounded-lg shadow-sm">
+              <div className="bg-[#1A1F2C] p-4 rounded-lg shadow-sm">
                 <h2 className="text-xl font-semibold mb-4">Mood du jour</h2>
                 <ToggleGroup type="single" value={context} onValueChange={(value) => value && setContext(value)}>
                   <div className="grid grid-cols-2 gap-4">
