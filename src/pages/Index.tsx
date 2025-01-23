@@ -8,7 +8,7 @@ import { getRecommendations } from "@/utils/recommendations";
 import { getWeather } from "@/utils/weatherApi";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Button } from "@/components/ui/button";
-import { Mail, Smartphone, Briefcase, UserRound, Palmtree, GlassWater, Music, Heart } from "lucide-react";
+import { Briefcase, UserRound, Palmtree, GlassWater, Music, Heart } from "lucide-react";
 
 const Index = () => {
   const [recommendations, setRecommendations] = useState([]);
@@ -66,27 +66,6 @@ const Index = () => {
             >
               SIGN IN
             </Button>
-
-            <div className="text-gray-400 text-sm">OR SIGN IN WITH</div>
-            
-            <div className="flex justify-center gap-4">
-              <Button
-                size="icon"
-                variant="outline"
-                className="w-12 h-12 rounded-full border-[#D946EF] text-[#D946EF]"
-                onClick={() => setIsStarted(true)}
-              >
-                <Mail className="w-5 h-5" />
-              </Button>
-              <Button
-                size="icon"
-                variant="outline"
-                className="w-12 h-12 rounded-full border-[#D946EF] text-[#D946EF]"
-                onClick={() => setIsStarted(true)}
-              >
-                <Smartphone className="w-5 h-5" />
-              </Button>
-            </div>
 
             <div className="pt-8 text-gray-400 text-sm">
               DIDN'T HAVE ACCOUNT?{" "}
