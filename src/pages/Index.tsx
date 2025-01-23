@@ -7,11 +7,13 @@ import { getClothingItems } from "@/utils/storage";
 import { getRecommendations } from "@/utils/recommendations";
 import { getWeather } from "@/utils/weatherApi";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import { Briefcase, UserRound, Palmtree, GlassWater, Music, Heart } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Mail, Smartphone, Briefcase, UserRound, Palmtree, GlassWater, Music, Heart } from "lucide-react";
 
 const Index = () => {
   const [recommendations, setRecommendations] = useState([]);
   const [context, setContext] = useState("casual");
+  const [isStarted, setIsStarted] = useState(false);
 
   useEffect(() => {
     const loadRecommendations = async () => {
@@ -28,6 +30,70 @@ const Index = () => {
     loadRecommendations();
   }, [context]);
 
+  if (!isStarted) {
+    return (
+      <div className="min-h-screen bg-[#0F0B1E] flex flex-col items-center justify-center p-4">
+        <div className="w-full max-w-md space-y-8 text-center">
+          <h1 className="text-5xl font-bold text-white">
+            Let's Get{" "}
+            <span className="text-[#D946EF] animate-pulse">Started!</span>
+          </h1>
+          
+          <div className="relative w-64 h-64 mx-auto my-12">
+            <div className="absolute inset-0 bg-gradient-to-r from-[#D946EF] to-[#8B5CF6] opacity-20 blur-xl rounded-full" />
+            <div className="relative">
+              <img
+                src="/lovable-uploads/1ec94333-6a87-4c7c-a2c4-b8445bf4f489.png"
+                alt="Clothes rack"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <Button 
+              onClick={() => setIsStarted(true)}
+              className="w-full h-14 text-lg bg-[#D946EF] hover:bg-[#C935DE] transition-colors"
+            >
+              SIGN IN
+            </Button>
+
+            <div className="text-gray-400 text-sm">OR SIGN IN WITH</div>
+            
+            <div className="flex justify-center gap-4">
+              <Button
+                size="icon"
+                variant="outline"
+                className="w-12 h-12 rounded-full border-[#D946EF] text-[#D946EF]"
+                onClick={() => setIsStarted(true)}
+              >
+                <Mail className="w-5 h-5" />
+              </Button>
+              <Button
+                size="icon"
+                variant="outline"
+                className="w-12 h-12 rounded-full border-[#D946EF] text-[#D946EF]"
+                onClick={() => setIsStarted(true)}
+              >
+                <Smartphone className="w-5 h-5" />
+              </Button>
+            </div>
+
+            <div className="pt-8 text-gray-400 text-sm">
+              DIDN'T HAVE ACCOUNT?{" "}
+              <button 
+                onClick={() => setIsStarted(true)}
+                className="text-[#D946EF] hover:underline"
+              >
+                SIGN UP NOW
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container py-8">
@@ -36,7 +102,6 @@ const Index = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
-            {/* Section Météo et Recommandations */}
             <div className="space-y-4">
               <h2 className="text-xl font-semibold">Votre ville ?</h2>
               <WeatherWidget />
@@ -78,7 +143,6 @@ const Index = () => {
               <RecommendationCard items={recommendations} />
             </div>
 
-            {/* Visualisation des tenues */}
             <div>
               <h2 className="text-2xl font-semibold mb-6">Flashez votre dressing</h2>
               <ClothingGrid />
