@@ -37,18 +37,28 @@ const Index = () => {
           <div className="lg:col-span-2 space-y-8">
             {/* Section Météo et Recommandations */}
             <div className="space-y-4">
+              <h2 className="text-xl font-semibold">Votre ville ?</h2>
               <WeatherWidget />
               <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h2 className="text-xl font-semibold mb-4">Filtrer par contexte</h2>
+                <h2 className="text-xl font-semibold mb-4">Mood du jour</h2>
                 <ToggleGroup type="single" value={context} onValueChange={(value) => value && setContext(value)}>
-                  <ToggleGroupItem value="casual" className="flex-1">
-                    Décontracté
+                  <ToggleGroupItem value="bureau" className="flex-1">
+                    Bureau & Meeting
                   </ToggleGroupItem>
-                  <ToggleGroupItem value="work" className="flex-1">
-                    Professionnel
+                  <ToggleGroupItem value="entretien" className="flex-1">
+                    Entretien
                   </ToggleGroupItem>
-                  <ToggleGroupItem value="formal" className="flex-1">
-                    Formel
+                  <ToggleGroupItem value="relax" className="flex-1">
+                    Relax & Week-end
+                  </ToggleGroupItem>
+                  <ToggleGroupItem value="ceremonie" className="flex-1">
+                    Cérémonie & Cocktail
+                  </ToggleGroupItem>
+                  <ToggleGroupItem value="night" className="flex-1">
+                    Night & Party
+                  </ToggleGroupItem>
+                  <ToggleGroupItem value="crush" className="flex-1">
+                    Crush & Date
                   </ToggleGroupItem>
                 </ToggleGroup>
               </div>
@@ -57,13 +67,13 @@ const Index = () => {
 
             {/* Visualisation des tenues */}
             <div>
-              <h2 className="text-2xl font-semibold mb-6">Ma Collection</h2>
+              <h2 className="text-2xl font-semibold mb-6">Flashez votre dressing</h2>
               <ClothingGrid />
             </div>
           </div>
           
           <div>
-            <h2 className="text-2xl font-semibold mb-6">Ajouter un vêtement</h2>
+            <h2 className="text-2xl font-semibold mb-6">Look recommandé</h2>
             <UploadForm />
           </div>
         </div>
