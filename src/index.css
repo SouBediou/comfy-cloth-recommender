@@ -24,7 +24,7 @@
 }
 
 .clothing-card {
-  @apply bg-white rounded-lg shadow-sm overflow-hidden transition-transform hover:scale-102;
+  @apply bg-white rounded-lg shadow-sm overflow-hidden transition-transform hover:scale-105;
 }
 
 .weather-widget {
