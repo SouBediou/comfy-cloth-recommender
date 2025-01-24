@@ -31,7 +31,7 @@ const Index = () => {
   }, [context]);
 
   const Logo = () => (
-    <div className="absolute top-6 right-6 w-32">
+    <div className="absolute top-2 right-6 w-32">
       <img
         src="/lovable-uploads/77c9682a-32ac-4e9e-aeac-2dd86af684f2.png"
         alt="Lookin'good"
