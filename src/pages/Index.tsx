@@ -45,11 +45,7 @@ const Index = () => {
       <div className="min-h-screen bg-[#0F0B1E] flex flex-col items-center justify-center p-4">
         <Logo />
         <div className="w-full max-w-md space-y-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white">
-            <span className="text-[#D946EF] animate-pulse">Started!</span>
-          </h1>
-          
-          <div className="relative w-64 h-64 mx-auto my-12">
+          <div className="relative w-64 h-64 mx-auto">
             <div className="absolute inset-0 bg-gradient-to-r from-[#D946EF] to-[#8B5CF6] opacity-20 blur-xl rounded-full" />
             <div className="relative">
               <img
@@ -59,6 +55,10 @@ const Index = () => {
               />
             </div>
           </div>
+          
+          <h1 className="text-4xl md:text-5xl font-bold text-white">
+            <span className="text-[#D946EF] animate-pulse">Started!</span>
+          </h1>
 
           <div className="space-y-4">
             <Button 
