@@ -45,7 +45,7 @@ const Index = () => {
       <div className="min-h-screen bg-[#0F0B1E] flex flex-col items-center justify-center p-4">
         <Logo />
         <div className="w-full max-w-md space-y-8 text-center">
-          <h1 className="text-5xl font-bold text-white">
+          <h1 className="text-4xl md:text-5xl font-bold text-white">
             Let's Get{" "}
             <span className="text-[#D946EF] animate-pulse">Started!</span>
           </h1>
