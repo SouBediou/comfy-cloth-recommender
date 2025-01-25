@@ -24,12 +24,12 @@ const MoodTabsColumn = ({ tabs }: MoodTabsColumnProps) => {
             key={tab.value}
             value={tab.value}
             className={`
-              w-full aspect-square
+              w-full aspect-square max-w-[200px] mx-auto
               flex flex-col items-center justify-center gap-3
               bg-[#3d3851]/25 hover:bg-[#3d3851]/40
               text-[#dcd7d7] transition-all duration-200
               data-[state=active]:bg-[#3d3851] data-[state=active]:text-white
-              p-6
+              p-4
             `}
           >
             {tab.icon}
@@ -52,15 +52,15 @@ export const MoodTabs = () => {
   const isMobile = useIsMobile();
 
   const leftColumnTabs: MoodTab[] = [
-    { value: "bureau", label: "Bureau & Meeting", icon: <Briefcase className="w-8 h-8" /> },
-    { value: "entretien", label: "Entretien", icon: <Calendar className="w-8 h-8" /> },
-    { value: "relax", label: "Relax & Week-end", icon: <Coffee className="w-8 h-8" /> },
+    { value: "bureau", label: "Bureau & Meeting", icon: <Briefcase className="w-6 h-6" /> },
+    { value: "entretien", label: "Entretien", icon: <Calendar className="w-6 h-6" /> },
+    { value: "relax", label: "Relax & Week-end", icon: <Coffee className="w-6 h-6" /> },
   ];
 
   const rightColumnTabs: MoodTab[] = [
-    { value: "ceremonie", label: "Cérémonie & Cocktail", icon: <GlassWater className="w-8 h-8" /> },
-    { value: "night", label: "Night & Party", icon: <Music className="w-8 h-8" /> },
-    { value: "crush", label: "Crush & Date", icon: <Heart className="w-8 h-8" /> },
+    { value: "ceremonie", label: "Cérémonie & Cocktail", icon: <GlassWater className="w-6 h-6" /> },
+    { value: "night", label: "Night & Party", icon: <Music className="w-6 h-6" /> },
+    { value: "crush", label: "Crush & Date", icon: <Heart className="w-6 h-6" /> },
   ];
 
   return (
