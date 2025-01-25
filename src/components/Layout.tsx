@@ -8,8 +8,8 @@ interface LayoutProps {
 export const Layout = ({ children }: LayoutProps) => (
   <div className="min-h-screen bg-[#0F0B1E] text-white">
     <Logo />
-    <div className="container mx-auto px-4 py-8 space-y-8">
+    <main className="pt-8">
       {children}
-    </div>
+    </main>
   </div>
 );
