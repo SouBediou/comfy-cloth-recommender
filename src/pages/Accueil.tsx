@@ -7,7 +7,7 @@ const Accueil = () => {
   return (
     <Layout>
       <h1 className="text-2xl font-bold text-[#D946EF] text-center mt-16 mb-12">
-        My Lookin'Good
+        Make Me Pretty
       </h1>
       <LocationSection />
       <MoodSection />
