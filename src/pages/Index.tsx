@@ -33,7 +33,7 @@ const Index = () => {
   const Logo = () => (
     <div className="absolute top-2 right-6 w-32">
       <img
-        src="/lovable-uploads/1678efc2-3659-4d9a-b513-867ea6b2cc24.png"
+        src="/lovable-uploads/23f4a87b-e26b-4b7e-86a8-5fd4585550ca.png"
         alt="Lookin'good"
         className="w-full h-auto"
       />
