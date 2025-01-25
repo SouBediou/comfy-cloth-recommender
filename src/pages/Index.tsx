@@ -8,6 +8,7 @@ import { getRecommendations } from "@/utils/recommendations";
 import { getWeather } from "@/utils/weatherApi";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Briefcase, UserRound, Palmtree, GlassWater, Music, Heart } from "lucide-react";
 
 const Index = () => {
@@ -92,7 +93,14 @@ const Index = () => {
     <div className="min-h-screen bg-[#0F0B1E] text-white">
       <Logo />
       <div className="container py-8">
-        <h1 className="text-4xl font-bold mb-4">LookinGood</h1>
+        <div className="flex justify-between items-center mb-8">
+          <h1 className="text-4xl font-bold">LookinGood</h1>
+          <Link to="/accueil">
+            <Button className="bg-[#D946EF] hover:bg-[#C935DE] transition-colors">
+              My Lookin'Good
+            </Button>
+          </Link>
+        </div>
         <p className="text-gray-300 mb-8">Votre assistant vestimentaire intelligent</p>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
