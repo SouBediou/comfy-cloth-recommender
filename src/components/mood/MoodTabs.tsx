@@ -1,3 +1,4 @@
+import React from "react";
 import { TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Briefcase, UserRound, Palmtree, GlassWater, Music, Heart } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
