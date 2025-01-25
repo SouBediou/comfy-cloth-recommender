@@ -6,10 +6,10 @@ interface TabContentProps {
 }
 
 export const TabContent = ({ title, description }: TabContentProps) => (
-  <Card>
+  <Card className="mt-12">
     <CardContent className="p-6">
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p>{description}</p>
+      <h3 className="text-xl font-semibold mb-4">{title}</h3>
+      <p className="text-[#D946EF]">{description}</p>
     </CardContent>
   </Card>
 );
