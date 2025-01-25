@@ -26,15 +26,15 @@ export const MoodTabs = () => {
 
   const renderTabRow = (tabs: MoodTab[]) => (
     <TabsList className={`
-      flex flex-row justify-between gap-8 bg-transparent w-full max-w-3xl mx-auto
-      ${isMobile ? 'flex-nowrap overflow-x-auto pb-4 px-4' : 'flex-wrap'}
+      grid grid-cols-3 gap-8 bg-transparent w-full max-w-4xl mx-auto
+      ${isMobile ? 'overflow-x-auto pb-4 px-4' : ''}
     `}>
       {tabs.map((tab) => (
         <TabsTrigger
           key={tab.value}
           value={tab.value}
           className={`
-            flex-1 min-w-[180px] max-w-[250px] aspect-square
+            w-full aspect-square
             flex flex-col items-center justify-center gap-3
             bg-[#3d3851]/25 hover:bg-[#3d3851]/40
             text-[#dcd7d7] transition-all duration-200
@@ -57,7 +57,7 @@ export const MoodTabs = () => {
   );
 
   return (
-    <div className="w-full flex flex-col gap-8">
+    <div className="w-full flex flex-col gap-12">
       {renderTabRow(firstRowTabs)}
       {renderTabRow(secondRowTabs)}
     </div>
