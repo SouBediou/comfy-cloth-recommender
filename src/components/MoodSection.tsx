@@ -2,20 +2,29 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 
 export const MoodSection = () => (
-  <section>
+  <section className="mt-16">
     <h2 className="text-2xl font-semibold mb-6">Mood du jour</h2>
     <Tabs defaultValue="bureau" className="w-full">
       <div className="grid md:grid-cols-2 gap-6">
         {/* Left Column */}
         <div className="space-y-2">
-          <TabsList className="flex flex-col w-full">
-            <TabsTrigger value="bureau" className="w-full justify-start p-4">
+          <TabsList className="flex flex-col w-full bg-[#3d3851]">
+            <TabsTrigger 
+              value="bureau" 
+              className="w-full justify-start p-4 text-[#dcd7d7] data-[state=active]:bg-[#4a4461] data-[state=active]:text-white"
+            >
               Bureau & Meeting
             </TabsTrigger>
-            <TabsTrigger value="entretien" className="w-full justify-start p-4">
+            <TabsTrigger 
+              value="entretien" 
+              className="w-full justify-start p-4 text-[#dcd7d7] data-[state=active]:bg-[#4a4461] data-[state=active]:text-white"
+            >
               Entretien
             </TabsTrigger>
-            <TabsTrigger value="relax" className="w-full justify-start p-4">
+            <TabsTrigger 
+              value="relax" 
+              className="w-full justify-start p-4 text-[#dcd7d7] data-[state=active]:bg-[#4a4461] data-[state=active]:text-white"
+            >
               Relax & Week-end
             </TabsTrigger>
           </TabsList>
@@ -23,14 +32,23 @@ export const MoodSection = () => (
 
         {/* Right Column */}
         <div className="space-y-2">
-          <TabsList className="flex flex-col w-full">
-            <TabsTrigger value="ceremonie" className="w-full justify-start p-4">
+          <TabsList className="flex flex-col w-full bg-[#3d3851]">
+            <TabsTrigger 
+              value="ceremonie" 
+              className="w-full justify-start p-4 text-[#dcd7d7] data-[state=active]:bg-[#4a4461] data-[state=active]:text-white"
+            >
               Cérémonie & Cocktail
             </TabsTrigger>
-            <TabsTrigger value="night" className="w-full justify-start p-4">
+            <TabsTrigger 
+              value="night" 
+              className="w-full justify-start p-4 text-[#dcd7d7] data-[state=active]:bg-[#4a4461] data-[state=active]:text-white"
+            >
               Night & Party
             </TabsTrigger>
-            <TabsTrigger value="crush" className="w-full justify-start p-4">
+            <TabsTrigger 
+              value="crush" 
+              className="w-full justify-start p-4 text-[#dcd7d7] data-[state=active]:bg-[#4a4461] data-[state=active]:text-white"
+            >
               Crush & Date
             </TabsTrigger>
           </TabsList>
