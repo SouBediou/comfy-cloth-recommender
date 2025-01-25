@@ -11,16 +11,9 @@ const Accueil = () => {
           Make Me Pretty
         </h1>
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          {/* Colonne de gauche */}
-          <div className="lg:col-span-4">
-            <LocationSection />
-          </div>
-          
-          {/* Colonne de droite */}
-          <div className="lg:col-span-8">
-            <MoodSection />
-          </div>
+        <div className="grid grid-cols-1 gap-8">
+          <LocationSection />
+          <MoodSection />
         </div>
       </div>
     </Layout>
