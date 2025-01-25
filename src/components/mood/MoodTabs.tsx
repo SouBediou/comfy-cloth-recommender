@@ -9,22 +9,30 @@ interface MoodTab {
   icon: React.ReactNode;
 }
 
-interface MoodTabsColumnProps {
-  tabs: MoodTab[];
-}
-
-const MoodTabsColumn = ({ tabs }: MoodTabsColumnProps) => {
+export const MoodTabs = () => {
   const isMobile = useIsMobile();
-  
+
+  const tabs: MoodTab[] = [
+    { value: "bureau", label: "Bureau & Meeting", icon: <Briefcase className="w-6 h-6" /> },
+    { value: "entretien", label: "Entretien", icon: <Calendar className="w-6 h-6" /> },
+    { value: "relax", label: "Relax & Week-end", icon: <Coffee className="w-6 h-6" /> },
+    { value: "ceremonie", label: "Cérémonie & Cocktail", icon: <GlassWater className="w-6 h-6" /> },
+    { value: "night", label: "Night & Party", icon: <Music className="w-6 h-6" /> },
+    { value: "crush", label: "Crush & Date", icon: <Heart className="w-6 h-6" /> },
+  ];
+
   return (
-    <div>
-      <TabsList className="flex flex-col w-full bg-transparent gap-4">
+    <div className="w-full overflow-x-auto">
+      <TabsList className={`
+        flex flex-row justify-start gap-4 bg-transparent
+        ${isMobile ? 'flex-nowrap overflow-x-auto pb-4' : 'flex-wrap justify-center'}
+      `}>
         {tabs.map((tab) => (
           <TabsTrigger
             key={tab.value}
             value={tab.value}
             className={`
-              w-full aspect-square max-w-[200px] mx-auto
+              min-w-[150px] aspect-square
               flex flex-col items-center justify-center gap-3
               bg-[#3d3851]/25 hover:bg-[#3d3851]/40
               text-[#dcd7d7] transition-all duration-200
@@ -44,29 +52,6 @@ const MoodTabsColumn = ({ tabs }: MoodTabsColumnProps) => {
           </TabsTrigger>
         ))}
       </TabsList>
-    </div>
-  );
-};
-
-export const MoodTabs = () => {
-  const isMobile = useIsMobile();
-
-  const leftColumnTabs: MoodTab[] = [
-    { value: "bureau", label: "Bureau & Meeting", icon: <Briefcase className="w-6 h-6" /> },
-    { value: "entretien", label: "Entretien", icon: <Calendar className="w-6 h-6" /> },
-    { value: "relax", label: "Relax & Week-end", icon: <Coffee className="w-6 h-6" /> },
-  ];
-
-  const rightColumnTabs: MoodTab[] = [
-    { value: "ceremonie", label: "Cérémonie & Cocktail", icon: <GlassWater className="w-6 h-6" /> },
-    { value: "night", label: "Night & Party", icon: <Music className="w-6 h-6" /> },
-    { value: "crush", label: "Crush & Date", icon: <Heart className="w-6 h-6" /> },
-  ];
-
-  return (
-    <div className={`grid ${isMobile ? 'grid-cols-1' : 'md:grid-cols-2'} gap-6`}>
-      <MoodTabsColumn tabs={leftColumnTabs} />
-      <MoodTabsColumn tabs={rightColumnTabs} />
     </div>
   );
 };
