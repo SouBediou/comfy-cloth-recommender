@@ -33,7 +33,7 @@ const Index = () => {
   const Logo = () => (
     <div className="absolute top-2 right-6 w-32">
       <img
-        src="/lovable-uploads/77c9682a-32ac-4e9e-aeac-2dd86af684f2.png"
+        src="/lovable-uploads/3a27ecdd-635f-4eb7-bba1-0138e6476c08.png"
         alt="Lookin'good"
         className="w-full h-auto"
       />
@@ -45,13 +45,8 @@ const Index = () => {
       <div className="min-h-screen bg-[#0F0B1E] flex flex-col items-center justify-center p-4">
         <Logo />
         <div className="w-full max-w-md space-y-8 text-center mt-20 md:mt-0">
-
-
-
-
-
-
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-12">
+            <span className="text-white">Let's Get </span>
             <span className="text-[#D946EF] animate-pulse">Started!</span>
           </h1>
 
