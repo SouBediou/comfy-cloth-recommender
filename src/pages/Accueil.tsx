@@ -4,8 +4,19 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Accueil = () => {
+  const Logo = () => (
+    <div className="absolute top-2 left-6 w-24">
+      <img
+        src="/lovable-uploads/23f4a87b-e26b-4b7e-86a8-5fd4585550ca.png"
+        alt="Lookin'good"
+        className="w-full h-auto"
+      />
+    </div>
+  );
+
   return (
     <div className="min-h-screen bg-[#0F0B1E] text-white">
+      <Logo />
       <div className="container mx-auto px-4 py-8 space-y-8">
         <h1 className="text-4xl font-bold text-[#D946EF] text-center mb-12">
           My Lookin'Good
@@ -21,7 +32,7 @@ const Accueil = () => {
 
         {/* Mood du jour Section */}
         <section>
-          <h2 className="text-2xl font-semibold mb-6">🎯 Mood du jour</h2>
+          <h2 className="text-2xl font-semibold mb-6">Mood du jour</h2>
           <Tabs defaultValue="bureau" className="w-full">
             <div className="grid md:grid-cols-2 gap-6">
               {/* Left Column */}
