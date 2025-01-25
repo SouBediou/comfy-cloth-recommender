@@ -7,8 +7,8 @@ export const MoodSection = () => (
     <Tabs defaultValue="bureau" className="w-full">
       <div className="grid md:grid-cols-2 gap-6">
         {/* Left Column */}
-        <div className="space-y-2">
-          <TabsList className="flex flex-col w-full bg-[#3d3851]">
+        <div>
+          <TabsList className="flex flex-col w-full bg-[#3d3851]/[0.21]">
             <TabsTrigger 
               value="bureau" 
               className="w-full justify-start p-4 text-[#dcd7d7] data-[state=active]:bg-[#4a4461] data-[state=active]:text-white"
@@ -31,8 +31,8 @@ export const MoodSection = () => (
         </div>
 
         {/* Right Column */}
-        <div className="space-y-2">
-          <TabsList className="flex flex-col w-full bg-[#3d3851]">
+        <div>
+          <TabsList className="flex flex-col w-full bg-[#3d3851]/[0.21]">
             <TabsTrigger 
               value="ceremonie" 
               className="w-full justify-start p-4 text-[#dcd7d7] data-[state=active]:bg-[#4a4461] data-[state=active]:text-white"
