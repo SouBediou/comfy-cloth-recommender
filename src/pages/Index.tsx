@@ -47,10 +47,10 @@ const Index = () => {
         <div className="w-full max-w-md space-y-8 text-center mt-20 md:mt-0">
           <div className="space-y-2">
             <h1 className="text-4xl md:text-5xl font-bold text-white">
-              ACCEUIL
+              Let's Get
             </h1>
             <h1 className="text-4xl md:text-5xl font-bold text-[#D946EF] animate-pulse">
-              SIGN_IN
+              Started!
             </h1>
           </div>
 
