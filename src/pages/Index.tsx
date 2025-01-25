@@ -33,7 +33,7 @@ const Index = () => {
   const Logo = () => (
     <div className="absolute top-2 right-6 w-32">
       <img
-        src="/lovable-uploads/3a27ecdd-635f-4eb7-bba1-0138e6476c08.png"
+        src="/lovable-uploads/1678efc2-3659-4d9a-b513-867ea6b2cc24.png"
         alt="Lookin'good"
         className="w-full h-auto"
       />
@@ -45,18 +45,22 @@ const Index = () => {
       <div className="min-h-screen bg-[#0F0B1E] flex flex-col items-center justify-center p-4">
         <Logo />
         <div className="w-full max-w-md space-y-8 text-center mt-20 md:mt-0">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-12">
-            <span className="text-white">Let's Get </span>
-            <span className="text-[#D946EF] animate-pulse">Started!</span>
-          </h1>
+          <div className="space-y-2">
+            <h1 className="text-4xl md:text-5xl font-bold text-white">
+              Let's Get
+            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-[#D946EF] animate-pulse">
+              Started!
+            </h1>
+          </div>
 
           <div className="relative w-64 h-64 mx-auto">
             <div className="absolute inset-0 bg-gradient-to-r from-[#D946EF] to-[#8B5CF6] opacity-20 blur-xl rounded-full" />
             <div className="relative">
               <img
-                src="/lovable-uploads/2d284ac0-bc9e-49f8-baf6-a5ae06a30340.png"
+                src="/lovable-uploads/6d34fe06-9b60-42bf-8bbd-58f07f9208fc.png"
                 alt="Clothes rack"
-                className="w-full h-full object-contain"
+                className="w-4/5 h-4/5 object-contain mx-auto"
               />
             </div>
           </div>
