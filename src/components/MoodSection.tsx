@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 export const MoodSection = () => (
   <section className="mt-16">
     <h2 className="text-2xl font-semibold mb-6">Mood du jour</h2>
-    <Tabs defaultValue="bureau" className="w-full">
+    <Tabs defaultValue="bureau" className="w-full mt-8">
       <div className="grid md:grid-cols-2 gap-6">
         {/* Left Column */}
         <div>
