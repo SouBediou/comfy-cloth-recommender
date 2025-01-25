@@ -60,7 +60,7 @@ const Index = () => {
               <img
                 src="/lovable-uploads/6d34fe06-9b60-42bf-8bbd-58f07f9208fc.png"
                 alt="Clothes rack"
-                className="w-4/5 h-4/5 object-contain mx-auto"
+                className="w-[95%] h-[95%] object-contain mx-auto"
               />
             </div>
           </div>
