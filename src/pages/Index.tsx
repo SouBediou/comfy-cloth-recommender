@@ -67,7 +67,7 @@ const Index = () => {
           <div className="space-y-4">
             <Button 
               onClick={() => setIsStarted(true)}
-              className="w-full h-14 text-lg bg-[#D946EF] hover:bg-[#C935DE] transition-colors"
+              className="w-1/2 mx-auto h-14 text-lg bg-[#D946EF] hover:bg-[#C935DE] transition-colors"
             >
               SIGN IN
             </Button>
