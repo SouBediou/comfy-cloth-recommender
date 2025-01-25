@@ -5,10 +5,10 @@ import { TabContent } from "./mood/TabContent";
 export const MoodSection = () => (
   <section className="mt-16">
     <h2 className="text-2xl font-semibold mb-8">Mood du jour</h2>
-    <Tabs defaultValue="bureau" className="w-full mt-8">
+    <Tabs defaultValue="bureau" className="w-full">
       <MoodTabs />
       
-      <div className="mt-6">
+      <div className="mt-12">
         <TabsContent value="bureau">
           <TabContent 
             title="Bureau & Meeting"
