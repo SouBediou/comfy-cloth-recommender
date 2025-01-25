@@ -26,7 +26,7 @@ export const MoodTabs = () => {
 
   const renderTabRow = (tabs: MoodTab[]) => (
     <TabsList className={`
-      grid grid-cols-3 gap-8 bg-transparent w-full max-w-4xl mx-auto
+      grid grid-cols-3 gap-8 bg-transparent w-full max-w-3xl mx-auto
       ${isMobile ? 'overflow-x-auto pb-4 px-4' : ''}
     `}>
       {tabs.map((tab) => (
@@ -34,7 +34,7 @@ export const MoodTabs = () => {
           key={tab.value}
           value={tab.value}
           className={`
-            w-full aspect-square
+            w-full aspect-square max-w-[160px]
             flex flex-col items-center justify-center gap-3
             bg-[#3d3851]/25 hover:bg-[#3d3851]/40
             text-[#dcd7d7] transition-all duration-200
@@ -43,7 +43,7 @@ export const MoodTabs = () => {
           `}
         >
           {tab.icon}
-          <span className="text-center whitespace-normal leading-tight">
+          <span className="text-center whitespace-normal leading-tight text-sm">
             {tab.label.split(" & ").map((part, index) => (
               <React.Fragment key={index}>
                 {part}
