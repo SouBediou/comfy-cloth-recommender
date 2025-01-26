@@ -11,7 +11,7 @@ export const WeatherInfo = ({ weather, city }: WeatherInfoProps) => (
     <div>
       <h2 className="text-4xl font-bold mb-2">{weather.temperature}°C</h2>
       <p className="text-xl capitalize mb-1">{weather.condition}</p>
-      <p className="text-lg text-black">{city}</p>
+      <p className="text-lg text-black font-medium">{city}</p>
     </div>
     <img 
       src={weather.icon} 
