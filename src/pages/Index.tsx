@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Layout } from "@/components/Layout";
 import { UploadForm } from "@/components/UploadForm";
 import { ClothingGrid } from "@/components/ClothingGrid";
@@ -9,7 +9,6 @@ import { getRecommendations } from "@/utils/recommendations";
 import { getWeather } from "@/utils/weatherApi";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { Briefcase, UserRound, Palmtree, GlassWater, Music, Heart } from "lucide-react";
 
 const Index = () => {
@@ -96,11 +95,6 @@ const Index = () => {
       <div className="container py-8">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-4xl font-bold">LookinGood</h1>
-          <Link to="/accueil">
-            <Button className="bg-[#D946EF] hover:bg-[#C935DE] transition-colors">
-              My Lookin'Good
-            </Button>
-          </Link>
         </div>
         <p className="text-gray-300 mb-8">Votre assistant vestimentaire intelligent</p>
         
