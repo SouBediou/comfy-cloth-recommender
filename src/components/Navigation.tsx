@@ -9,9 +9,9 @@ import {
 
 export const Navigation = () => {
   const menuItems = [
-    { label: "Accueil", path: "/" },
-    { label: "Garde-robe", path: "/wardrobe" },
-    { label: "Profil", path: "/profile" },
+    { label: "Sign In", path: "/" },
+    { label: "Make Me Pretty", path: "/make-me-pretty" },
+    { label: "My Closet Paradise", path: "/closet" },
     { label: "Paramètres", path: "/settings" },
   ];
 
