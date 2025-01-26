@@ -1,15 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Layout } from "@/components/Layout";
-import { UploadForm } from "@/components/UploadForm";
-import { ClothingGrid } from "@/components/ClothingGrid";
 import { WeatherWidget } from "@/components/WeatherWidget";
-import { RecommendationCard } from "@/components/RecommendationCard";
-import { getClothingItems } from "@/utils/storage";
-import { getRecommendations } from "@/utils/recommendations";
 import { getWeather } from "@/utils/weatherApi";
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import { Button } from "@/components/ui/button";
-import { Briefcase, UserRound, Palmtree, GlassWater, Music, Heart } from "lucide-react";
+import { MoodSection } from "@/components/MoodSection";
 
 const Index = () => {
   const [recommendations, setRecommendations] = useState([]);
@@ -20,9 +13,7 @@ const Index = () => {
     const loadRecommendations = async () => {
       try {
         const weather = await getWeather("Paris");
-        const items = getClothingItems();
-        const recommended = getRecommendations(items, weather, context);
-        setRecommendations(recommended);
+        setRecommendations([]);
       } catch (error) {
         console.error("Erreur lors du chargement des recommandations:", error);
       }
@@ -67,12 +58,12 @@ const Index = () => {
           </div>
 
           <div className="space-y-4">
-            <Button 
+            <button 
               onClick={() => setIsStarted(true)}
-              className="w-1/2 mx-auto h-14 text-lg bg-[#D946EF] hover:bg-[#C935DE] transition-colors"
+              className="w-1/2 mx-auto h-14 text-lg bg-[#D946EF] hover:bg-[#C935DE] transition-colors rounded-md text-white"
             >
               SIGN IN
-            </Button>
+            </button>
 
             <div className="pt-8 text-gray-400 text-sm">
               DIDN'T HAVE ACCOUNT?{" "}
@@ -94,62 +85,14 @@ const Index = () => {
       <Logo />
       <div className="container py-8">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-4xl font-bold">LookinGood</h1>
+          <p className="text-gray-300 mb-8">Votre assistant vestimentaire intelligent</p>
         </div>
-        <p className="text-gray-300 mb-8">Votre assistant vestimentaire intelligent</p>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-xl font-semibold">Votre ville ?</h2>
-              <WeatherWidget />
-              <div className="bg-[#1A1F2C] p-4 rounded-lg shadow-sm">
-                <h2 className="text-xl font-semibold mb-4">Mood du jour</h2>
-                <ToggleGroup type="single" value={context} onValueChange={(value) => value && setContext(value)}>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-4">
-                      <ToggleGroupItem value="bureau" className="w-full bg-[#9b87f5] text-white hover:bg-[#8b77e5] h-24 rounded-lg flex items-center justify-center gap-2">
-                        <Briefcase className="w-6 h-6" />
-                        Bureau & Meeting
-                      </ToggleGroupItem>
-                      <ToggleGroupItem value="entretien" className="w-full bg-[#F97316] text-white hover:bg-[#e96305] h-24 rounded-lg flex items-center justify-center gap-2">
-                        <UserRound className="w-6 h-6" />
-                        Entretien
-                      </ToggleGroupItem>
-                      <ToggleGroupItem value="relax" className="w-full bg-[#0EA5E9] text-white hover:bg-[#0d94d8] h-24 rounded-lg flex items-center justify-center gap-2">
-                        <Palmtree className="w-6 h-6" />
-                        Relax & Week-end
-                      </ToggleGroupItem>
-                    </div>
-                    <div className="space-y-4">
-                      <ToggleGroupItem value="ceremonie" className="w-full bg-[#33C3F0] text-white hover:bg-[#22b2df] h-24 rounded-lg flex items-center justify-center gap-2">
-                        <GlassWater className="w-6 h-6" />
-                        Cérémonie & Cocktail
-                      </ToggleGroupItem>
-                      <ToggleGroupItem value="night" className="w-full bg-[#F2FCE2] text-gray-800 hover:bg-[#e2ecD2] h-24 rounded-lg flex items-center justify-center gap-2">
-                        <Music className="w-6 h-6" />
-                        Night & Party
-                      </ToggleGroupItem>
-                      <ToggleGroupItem value="crush" className="w-full bg-[#FEC6A1] text-gray-800 hover:bg-[#eeb691] h-24 rounded-lg flex items-center justify-center gap-2">
-                        <Heart className="w-6 h-6" />
-                        Crush & Date
-                      </ToggleGroupItem>
-                    </div>
-                  </div>
-                </ToggleGroup>
-              </div>
-              <RecommendationCard items={recommendations} />
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-semibold mb-6">Flashez votre dressing</h2>
-              <ClothingGrid />
-            </div>
-          </div>
-          
-          <div>
-            <h2 className="text-2xl font-semibold mb-6">Look recommandé</h2>
-            <UploadForm />
+        <div className="space-y-8">
+          <div className="space-y-4">
+            <h2 className="text-xl font-semibold">Votre ville ?</h2>
+            <WeatherWidget />
+            <MoodSection />
           </div>
         </div>
       </div>

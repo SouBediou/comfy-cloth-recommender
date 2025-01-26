@@ -35,9 +35,9 @@ export const MoodTabs = () => {
             className={`
               min-w-[96px] h-24 rounded-full flex-shrink-0
               flex flex-col items-center justify-center gap-1
-              bg-[#3d3851]/25 hover:bg-[#3d3851]/40
+              bg-[#81017d]/25 hover:bg-[#81017d]/40
               text-[#dcd7d7] transition-all duration-200
-              data-[state=active]:bg-[#3d3851] data-[state=active]:text-white
+              data-[state=active]:bg-[#81017d] data-[state=active]:text-white
               p-4
             `}
           >
