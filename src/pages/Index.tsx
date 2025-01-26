@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Layout } from "@/components/Layout";
 import { UploadForm } from "@/components/UploadForm";
 import { ClothingGrid } from "@/components/ClothingGrid";
 import { WeatherWidget } from "@/components/WeatherWidget";
@@ -90,7 +91,7 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#0F0B1E] text-white">
+    <Layout>
       <Logo />
       <div className="container py-8">
         <div className="flex justify-between items-center mb-8">
@@ -158,7 +159,7 @@ const Index = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 
