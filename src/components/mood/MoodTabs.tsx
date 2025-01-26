@@ -13,20 +13,20 @@ export const MoodTabs = () => {
   const isMobile = useIsMobile();
 
   const firstRowTabs: MoodTab[] = [
-    { value: "bureau", label: "Bureau & Meeting", icon: <Briefcase className="w-5 h-5" /> },
-    { value: "entretien", label: "Entretien", icon: <Calendar className="w-5 h-5" /> },
-    { value: "relax", label: "Relax & Week-end", icon: <Coffee className="w-5 h-5" /> },
+    { value: "bureau", label: "Bureau & Meeting", icon: <Briefcase className="w-4 h-4" /> },
+    { value: "entretien", label: "Entretien", icon: <Calendar className="w-4 h-4" /> },
+    { value: "relax", label: "Relax & Week-end", icon: <Coffee className="w-4 h-4" /> },
   ];
 
   const secondRowTabs: MoodTab[] = [
-    { value: "ceremonie", label: "Cérémonie & Cocktail", icon: <GlassWater className="w-5 h-5" /> },
-    { value: "night", label: "Night & Party", icon: <Music className="w-5 h-5" /> },
-    { value: "crush", label: "Crush & Date", icon: <Heart className="w-5 h-5" /> },
+    { value: "ceremonie", label: "Cérémonie & Cocktail", icon: <GlassWater className="w-4 h-4" /> },
+    { value: "night", label: "Night & Party", icon: <Music className="w-4 h-4" /> },
+    { value: "crush", label: "Crush & Date", icon: <Heart className="w-4 h-4" /> },
   ];
 
   const renderTabRow = (tabs: MoodTab[]) => (
     <TabsList className={`
-      grid grid-cols-3 gap-4 bg-transparent w-full max-w-3xl mx-auto
+      grid grid-cols-3 gap-2 bg-transparent w-full max-w-2xl mx-auto
       ${isMobile ? 'overflow-x-auto pb-4 px-4' : ''}
     `}>
       {tabs.map((tab) => (
@@ -34,8 +34,8 @@ export const MoodTabs = () => {
           key={tab.value}
           value={tab.value}
           className={`
-            w-32 h-32 rounded-full
-            flex flex-col items-center justify-center gap-2
+            w-24 h-24 rounded-full
+            flex flex-col items-center justify-center gap-1
             bg-[#3d3851]/25 hover:bg-[#3d3851]/40
             text-[#dcd7d7] transition-all duration-200
             data-[state=active]:bg-[#3d3851] data-[state=active]:text-white
@@ -43,7 +43,7 @@ export const MoodTabs = () => {
           `}
         >
           {tab.icon}
-          <span className="text-center whitespace-normal leading-tight text-xs">
+          <span className="text-center whitespace-normal leading-tight text-[10px]">
             {tab.label.split(" & ").map((part, index) => (
               <React.Fragment key={index}>
                 {part}
@@ -57,7 +57,7 @@ export const MoodTabs = () => {
   );
 
   return (
-    <div className="w-full flex flex-col gap-8">
+    <div className="w-full flex flex-col gap-6">
       {renderTabRow(firstRowTabs)}
       {renderTabRow(secondRowTabs)}
     </div>
