@@ -22,10 +22,11 @@ export const MoodTabs = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full px-4">
       <TabsList className={`
-        flex flex-row gap-4 bg-transparent w-full overflow-x-auto pb-4
-        ${isMobile ? 'px-4' : 'justify-center'}
+        flex flex-row gap-4 bg-transparent w-full overflow-x-auto
+        py-4 px-2 mx-[-1rem]
+        ${isMobile ? 'justify-start' : 'justify-center'}
       `}>
         {allTabs.map((tab) => (
           <TabsTrigger
