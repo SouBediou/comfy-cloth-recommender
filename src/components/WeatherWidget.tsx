@@ -52,8 +52,7 @@ export const WeatherWidget = () => {
   if (!weather) return null;
 
   return (
-    <div className="space-y-4 w-1/2">
-      <h2 className="text-2xl font-bold mb-4 text-white">Mon spot du jour</h2>
+    <div className="space-y-4">
       <WeatherSearch 
         inputCity={inputCity}
         setInputCity={setInputCity}
