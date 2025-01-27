@@ -16,37 +16,35 @@ const MakeMePretty = () => {
           </h1>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4">
           {/* Left Column */}
-          <div className="space-y-8">
-            <div className="rounded-lg bg-white/10 p-6 shadow backdrop-blur-sm">
-              <h2 className="text-2xl font-semibold mb-6 text-white">Spot du jour</h2>
+          <div className="flex flex-col gap-8">
+            <section className="bg-[#1B172C] rounded-lg p-6">
+              <h2 className="text-white text-xl mb-4">Spot du jour</h2>
               <LocationSection />
-            </div>
+            </section>
 
-            <div className="rounded-lg bg-white/10 p-6 shadow backdrop-blur-sm">
-              <h2 className="text-2xl font-semibold mb-6 text-white">Mood du jour</h2>
+            <section className="bg-[#1B172C] rounded-lg p-6">
+              <h2 className="text-white text-xl mb-4">Mood du jour</h2>
               <MoodSection />
-            </div>
+            </section>
           </div>
 
           {/* Right Column */}
-          <div className="space-y-8">
-            <div className="rounded-lg bg-white/10 p-6 shadow backdrop-blur-sm">
-              <h2 className="text-2xl font-semibold mb-6 text-white">My Shape</h2>
-              {/* Shape content will be implemented later */}
-              <div className="h-48 flex items-center justify-center text-white/60">
+          <div className="flex flex-col gap-8">
+            <section className="bg-[#1B172C] rounded-lg p-6 h-[300px]">
+              <h2 className="text-white text-xl mb-4">My Shape</h2>
+              <div className="h-48 flex items-center justify-center text-gray-400">
                 Contenu à venir
               </div>
-            </div>
+            </section>
 
-            <div className="rounded-lg bg-white/10 p-6 shadow backdrop-blur-sm">
-              <h2 className="text-2xl font-semibold mb-6 text-white">Actu tendances</h2>
-              {/* Trends content will be implemented later */}
-              <div className="h-48 flex items-center justify-center text-white/60">
+            <section className="bg-[#1B172C] rounded-lg p-6 h-[300px]">
+              <h2 className="text-white text-xl mb-4">Actu tendances</h2>
+              <div className="h-48 flex items-center justify-center text-gray-400">
                 Contenu à venir
               </div>
-            </div>
+            </section>
           </div>
         </div>
       </div>
