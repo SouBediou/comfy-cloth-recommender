@@ -16,17 +16,37 @@ const MakeMePretty = () => {
           </h1>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 space-y-8">
-            <LocationSection />
-            <MoodSection />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Left Column */}
+          <div className="space-y-8">
+            <div className="rounded-lg bg-white/10 p-6 shadow backdrop-blur-sm">
+              <h2 className="text-2xl font-semibold mb-6 text-white">Spot du jour</h2>
+              <LocationSection />
+            </div>
+
+            <div className="rounded-lg bg-white/10 p-6 shadow backdrop-blur-sm">
+              <h2 className="text-2xl font-semibold mb-6 text-white">Mood du jour</h2>
+              <MoodSection />
+            </div>
           </div>
-          
-          <div className="lg:col-span-1">
-            <section className="sticky top-4">
-              <h2 className="text-2xl font-semibold mb-4">Love it / Skip it</h2>
-              {/* Content for Love it/Skip it will be added later */}
-            </section>
+
+          {/* Right Column */}
+          <div className="space-y-8">
+            <div className="rounded-lg bg-white/10 p-6 shadow backdrop-blur-sm">
+              <h2 className="text-2xl font-semibold mb-6 text-white">My Shape</h2>
+              {/* Shape content will be implemented later */}
+              <div className="h-48 flex items-center justify-center text-white/60">
+                Contenu à venir
+              </div>
+            </div>
+
+            <div className="rounded-lg bg-white/10 p-6 shadow backdrop-blur-sm">
+              <h2 className="text-2xl font-semibold mb-6 text-white">Actu tendances</h2>
+              {/* Trends content will be implemented later */}
+              <div className="h-48 flex items-center justify-center text-white/60">
+                Contenu à venir
+              </div>
+            </div>
           </div>
         </div>
       </div>
