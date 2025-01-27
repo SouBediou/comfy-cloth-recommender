@@ -52,14 +52,14 @@ export const WeatherWidget = () => {
   if (!weather) return null;
 
   return (
-    <div className="space-y-4 max-w-[70%] mx-auto">
+    <div className="space-y-4">
       <WeatherSearch 
         inputCity={inputCity}
         setInputCity={setInputCity}
         handleSubmit={handleSubmit}
       />
 
-      <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-lg p-8">
+      <div className="bg-blue-500 rounded-lg p-6 text-white">
         <WeatherInfo weather={weather} city={city} />
         <WeatherStats weather={weather} />
       </div>
