@@ -6,17 +6,13 @@ import { MoodSection } from "@/components/MoodSection";
 const MakeMePretty = () => {
   return (
     <Layout>
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center space-y-2 mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white">
-            Outfit
-          </h1>
-          <h1 className="text-4xl md:text-5xl font-bold text-[#c451c9]">
-            Me
-          </h1>
+      <div className="flex flex-col gap-8 p-4">
+        <div className="text-white">
+          <h1 className="text-4xl">Outfit</h1>
+          <h2 className="text-[#81017d] text-3xl">Me</h2>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4">
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Column */}
           <div className="flex flex-col gap-8">
             <section className="bg-[#1B172C] rounded-lg p-6">
