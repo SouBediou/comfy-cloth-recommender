@@ -4,13 +4,12 @@ import { Layout } from "@/components/Layout";
 const OutfitMe = () => {
   return (
     <Layout>
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center justify-center min-h-[80vh]">
-          <h1 className="text-4xl font-bold mb-2">
-            <span className="text-[#dcd7d7]">Outfit</span>{" "}
-            <span className="text-[#c451c9]">Me</span>
-          </h1>
-        </div>
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-2">
+          Outfit
+          <br />
+          <span className="text-[#c451c9]">Me</span>
+        </h1>
       </div>
     </Layout>
   );
