@@ -9,10 +9,10 @@ const MakeMePretty = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="text-center space-y-2 mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-white">
-            Make Me
+            Outfit
           </h1>
           <h1 className="text-4xl md:text-5xl font-bold text-[#c451c9]">
-            Pretty
+            Me
           </h1>
         </div>
 
