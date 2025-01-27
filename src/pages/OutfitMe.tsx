@@ -5,11 +5,14 @@ const OutfitMe = () => {
   return (
     <Layout>
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-2">
-          Outfit
-          <br />
-          <span className="text-[#c451c9]">Me</span>
-        </h1>
+        <div className="text-center space-y-2">
+          <h1 className="text-4xl md:text-5xl font-bold text-white">
+            Outfit
+          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-[#c451c9]">
+            Me
+          </h1>
+        </div>
       </div>
     </Layout>
   );
