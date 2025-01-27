@@ -3,8 +3,7 @@ import { MoodTabs } from "./mood/MoodTabs";
 import { TabContent } from "./mood/TabContent";
 
 export const MoodSection = () => (
-  <section className="mt-16">
-    <h2 className="text-2xl font-semibold mb-8">Mood du jour</h2>
+  <section>
     <Tabs defaultValue="bureau" className="w-full">
       <MoodTabs />
       
