@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const Index = () => {
@@ -39,6 +39,7 @@ const Index = () => {
 
         <div className="space-y-4">
           <button 
+            onClick={() => navigate("/signin")}
             className="w-1/2 mx-auto h-14 text-lg bg-[#D946EF] hover:bg-[#C935DE] transition-colors rounded-md text-white"
           >
             SIGN IN
