@@ -9,8 +9,9 @@ const SignIn = () => {
       <div className="flex flex-col items-center justify-center min-h-[80vh] px-4">
         <div className="w-full max-w-md space-y-8">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-[#dcd7d7]">
-              Welcome Back!
+            <h1 className="text-4xl font-bold">
+              <span className="text-[#dcd7d7]">Welcome</span>{" "}
+              <span className="text-[#c451c9]">Back!</span>
             </h1>
           </div>
 
