@@ -10,13 +10,13 @@ interface WeatherSearchProps {
 }
 
 export const WeatherSearch = ({ inputCity, setInputCity, handleSubmit }: WeatherSearchProps) => (
-  <form onSubmit={handleSubmit} className="flex gap-4 max-w-xl mx-auto">
+  <form onSubmit={handleSubmit} className="flex gap-4 max-w-md mx-auto">
     <Input
       type="text"
       value={inputCity}
       onChange={(e) => setInputCity(e.target.value)}
       placeholder="Entrez une ville..."
-      className="bg-white/90 text-lg py-6"
+      className="bg-white/90 text-lg py-6 text-black"
     />
     <Button type="submit" size="icon" className="h-14 w-14">
       <Search className="h-6 w-6" />

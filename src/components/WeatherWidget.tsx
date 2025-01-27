@@ -52,7 +52,7 @@ export const WeatherWidget = () => {
   if (!weather) return null;
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 max-w-[70%] mx-auto">
       <WeatherSearch 
         inputCity={inputCity}
         setInputCity={setInputCity}
