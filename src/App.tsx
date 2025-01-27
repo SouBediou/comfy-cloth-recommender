@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import MakeMePretty from "./pages/MakeMePretty";
 import MyClosetParadise from "./pages/MyClosetParadise";
 import Settings from "./pages/Settings";
+import SignUp from "./pages/SignUp";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/outfit-me" element={<MakeMePretty />} />
           <Route path="/my-closet-paradise" element={<MyClosetParadise />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

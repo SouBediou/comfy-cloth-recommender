@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Layout } from "@/components/Layout";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
   const Logo = () => (
     <div className="absolute top-2 left-6 w-24">
       <img
@@ -46,6 +47,7 @@ const Index = () => {
           <div className="pt-8 text-gray-400 text-sm">
             DIDN'T HAVE ACCOUNT?{" "}
             <button 
+              onClick={() => navigate("/signup")}
               className="text-[#D946EF] hover:underline"
             >
               SIGN UP NOW
