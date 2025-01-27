@@ -1,6 +1,7 @@
 import React from "react";
 import { Layout } from "@/components/Layout";
 import { WeatherWidget } from "@/components/WeatherWidget";
+import { MoodSection } from "@/components/MoodSection";
 
 const OutfitMe = () => {
   return (
@@ -19,6 +20,27 @@ const OutfitMe = () => {
           <div className="bg-[#1B172C] rounded-lg p-6">
             <h2 className="text-white text-xl mb-4">Spot du jour</h2>
             <WeatherWidget />
+          </div>
+
+          <div className="bg-[#1B172C] rounded-lg p-6">
+            <h2 className="text-white text-xl mb-4">Mood du jour</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                'Bureau & Meeting',
+                'Entretien',
+                'Relax & Week-end',
+                'Cérémonie & Cocktail',
+                'Night & Party',
+                'Crush & Date'
+              ].map(event => (
+                <button
+                  key={event}
+                  className="bg-[#81017d] text-white p-3 rounded-lg hover:opacity-90 transition-opacity"
+                >
+                  {event}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
