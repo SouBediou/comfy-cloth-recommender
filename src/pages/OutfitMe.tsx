@@ -1,9 +1,18 @@
 import React from "react";
 import { Layout } from "@/components/Layout";
 import { WeatherWidget } from "@/components/WeatherWidget";
-import { MoodSection } from "@/components/MoodSection";
+import { Briefcase, Users, Sun, Wine, PartyPopper, Heart } from "lucide-react";
 
 const OutfitMe = () => {
+  const moodButtons = [
+    { text: 'Bureau & Meeting', icon: <Briefcase className="w-5 h-5" /> },
+    { text: 'Entretien', icon: <Users className="w-5 h-5" /> },
+    { text: 'Relax & Week-end', icon: <Sun className="w-5 h-5" /> },
+    { text: 'Cérémonie & Cocktail', icon: <Wine className="w-5 h-5" /> },
+    { text: 'Night & Party', icon: <PartyPopper className="w-5 h-5" /> },
+    { text: 'Crush & Date', icon: <Heart className="w-5 h-5" /> }
+  ];
+
   return (
     <Layout>
       <div className="container mx-auto px-4 py-8">
@@ -25,19 +34,13 @@ const OutfitMe = () => {
           <div className="bg-[#1B172C] rounded-lg p-6">
             <h2 className="text-white text-xl mb-4">Mood du jour</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                'Bureau & Meeting',
-                'Entretien',
-                'Relax & Week-end',
-                'Cérémonie & Cocktail',
-                'Night & Party',
-                'Crush & Date'
-              ].map(event => (
+              {moodButtons.map(({ text, icon }) => (
                 <button
-                  key={event}
-                  className="bg-[#81017d] text-white p-3 rounded-lg hover:opacity-90 transition-opacity"
+                  key={text}
+                  className="bg-[#81017d] text-white p-3 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
                 >
-                  {event}
+                  {icon}
+                  {text}
                 </button>
               ))}
             </div>
